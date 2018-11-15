@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <Spinner
+        android:spinnerMode="dialog"
+        android:background="@drawable/spinner_design"
+        android:layout_margin="10dp"
+        android:id="@+id/crop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </Spinner>
+    <Spinner
+        android:spinnerMode="dialog"
+        android:layout_margin="10dp"
+        android:id="@+id/year"
+        android:background="@drawable/spinner_design"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </Spinner>
+
+    <Button
+        android:id="@+id/btnPredict"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Predict Result"
+        android:background="@drawable/button_design"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/mspResult"
+        android:layout_marginTop="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result will be shown here"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>

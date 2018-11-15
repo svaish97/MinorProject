@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">The Digital Farmer</string>
+    <string name="disease">Leaf Disease</string>
+    <string name="classify">Leaf Classification</string>
+    <string name="msp">MSP</string>
+    <string name="title_activity_login">Sign in</string>
+    <!-- Strings related to login -->
+    <string name="prompt_phone">Phone Number</string>
+    <string name="prompt_otp">OTP</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    
+    <string-array name="crops">
+      <item>PADDY</item>
+        <item>PADDY A</item>
+        <item>JOWAR</item>
+        <item>BAJRA</item>
+        <item>MAIZE</item>
+        <item>RAGI</item>
+        <item>WHEAT</item>
+        <item>BARLEY</item>
+        <item>GRAM</item>
+        <item>ARHAR</item>
+        <item>MOONG</item>
+        <item>URAD</item>
+        <item>MASUR (LENTIL)</item>
+        <item>SUGARCANE</item>
+        <item>COTTON F-414</item>
+        <item>COTTON H-777</item>
+        <item>COTTON J-34</item>
+        <item>COTTON H-4</item>
+        <item>GROUNDNUT</item>
+        <item>JUTE</item>
+        <item>MUSTARD</item>
+        <item>SUNFLOWER SEED</item>
+        <item>SOYABEAN BLACK</item>
+        <item>SOYABEAN YELLOW</item>
+        <item>SAFFLOWER</item>
+        <item>TORIA</item>
+        <item>TOBACCO (BLACK SOIL)</item>
+        <item>TOBACCO (LIGHT SOIL)</item>
+        <item>COPRA (MILING)</item>
+        <item>COPRA (BALL)</item>
+        <item>SESAMUM</item>
+        <item>NIGERSEED</item>
+    </string-array>
+
+    <string-array name="year">
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+    </string-array>
+</resources>
