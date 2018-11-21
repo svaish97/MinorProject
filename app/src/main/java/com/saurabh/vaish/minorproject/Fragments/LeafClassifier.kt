@@ -16,7 +16,11 @@ import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.layout_leaf_classify.*
 import okhttp3.*
 import java.io.File
+import java.io.IOException
+import java.lang.Exception
+import java.net.HttpURLConnection
 import java.net.URL
+import java.util.*
 
 class LeafClassifier: Fragment() {
     var filepath:Uri?=null
@@ -35,7 +39,7 @@ class LeafClassifier: Fragment() {
             file=File(filepath!!.path)
             Log.d("File",filepath!!.path)
             val networkState =NetworkState()
-            networkState.execute("http://192.168.43.99:5001/index")
+            networkState.execute("http://192.168.43.209:2001/leaf")
         }
     }
 
@@ -44,6 +48,7 @@ class LeafClassifier: Fragment() {
             val stringUrl=params[0]
 
             val url= URL(stringUrl)
+            val httpConnection=url.openConnection() as HttpURLConnection
 
             val client=OkHttpClient()
             val body =MultipartBody.Builder().setType(MultipartBody.FORM)
@@ -53,12 +58,14 @@ class LeafClassifier: Fragment() {
             val request=Request.Builder().url(url)
                     .post(body).build()
             val response=client.newCall(request).execute()
-            Log.d("Okhttp",response.body().toString())
-            return null
+                val myresult= response.body()?.string()
+
+
+        return myresult
         }
 
         override fun onPostExecute(result: String?) {
-            leafClassifyResult.text=result
+           leafClassifyResult.text=result
             super.onPostExecute(result)
         }
     }

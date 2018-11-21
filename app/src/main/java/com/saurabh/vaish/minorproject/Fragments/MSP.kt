@@ -94,19 +94,19 @@ class MSP:android.support.v4.app.Fragment(){
             val body = RequestBody.create(JSON,actualData.toString())
             val request=Request.Builder().url(url).post(body).build()
             val response=client.newCall(request).execute()
-            Log.d("Okhttp",response.body().toString())
+//            Log.d("Okhttp",response.body().toString())
 
 
             //for reading server response
-            val inputStream=httpConnection.inputStream
-            val s=Scanner(inputStream)
-            s.useDelimiter("\\A")
-            if(s.hasNext()){
-                val str=s.next()
-                return str
-            }
+//            val inputStream=httpConnection.inputStream
+//            val s=Scanner(inputStream)
+//            s.useDelimiter("\\A")
+//            if(s.hasNext()){
+//                val str=s.next()
+//                return str
+//            }
 
-            return null
+            return response.body()?.string()
 
 
         }
