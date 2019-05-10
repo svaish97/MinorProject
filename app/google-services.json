@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "530009360543-hu1scmkq922sd0jvm0t9t252fkjqbdvv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.saurabh.vaish.minorproject",
+            "certificate_hash": "47a5dfb82e859d46e0862faef086264c1dc35d87"
+          }
+        },
+        {
           "client_id": "530009360543-krjbg327081dkfdmf6qqt2rfdtmj56gi.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -33,20 +41,13 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
               "client_id": "530009360543-r9ncdpenh7fsiiihp9f2cj9geibo7emk.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
-        },
-        "ads_service": {
-          "status": 2
         }
       }
     }

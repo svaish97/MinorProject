@@ -36,10 +36,10 @@ class LeafClassifier: Fragment() {
 
         classifyLeaf.setOnClickListener {
 
-            file=File(filepath!!.path)
-            Log.d("File",filepath!!.path)
+            file=File(filepath.toString())
+            Log.d("File",filepath.toString())
             val networkState =NetworkState()
-            networkState.execute("http://192.168.43.209:2001/leaf")
+            networkState.execute("http://192.168.43.167:5001/")
         }
     }
 
