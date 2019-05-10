@@ -38,7 +38,7 @@ class LeafClassifier: Fragment() {
 
         classifyLeaf.setOnClickListener {
 
-            file=File(filepath!!.path)
+            file=File(getPath(filepath!!))
             Log.d("File",filepath!!.path)
             val networkState =NetworkState()
             networkState.execute("http://192.168.43.209:2001/leaf")
