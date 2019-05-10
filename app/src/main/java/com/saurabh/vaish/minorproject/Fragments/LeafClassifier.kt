@@ -2,8 +2,10 @@ package com.saurabh.vaish.minorproject.Fragments
 
 import android.content.Intent
 import android.net.Uri
+import android.content.Context
 import android.os.AsyncTask
 import android.os.Bundle
+import android.provider.MediaStore
 import android.support.v4.app.ActivityCompat
 import android.support.v4.app.Fragment
 import android.util.Log
@@ -36,11 +38,25 @@ class LeafClassifier: Fragment() {
 
         classifyLeaf.setOnClickListener {
 
-            file=File(filepath!!.path)
+            file=File(getPath(filepath!!))
             Log.d("File",filepath!!.path)
             val networkState =NetworkState()
             networkState.execute("http://192.168.43.209:2001/leaf")
         }
+    }
+
+    private fun getPath(uri: Uri): String? {
+        var projection = arrayOf(MediaStore.Images.Media.DATA)
+        var cursor = context!!.contentResolver.query(uri, projection, null, null, null)
+
+        if (cursor == null) {
+            return null
+        }
+        var column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA)
+        cursor.moveToFirst()
+        var s = cursor.getString(column_index)
+        cursor.close()
+        return s
     }
 
     inner class NetworkState:AsyncTask<String,Void,String>(){
